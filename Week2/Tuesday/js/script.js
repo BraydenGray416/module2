@@ -1,5 +1,4 @@
 var shoppingList = ["Apples", "Bananas", "Pears", "Kiwi Fruit", "Oranges", "Dates"];
-console.log(shoppingList);
 
 document.write("<h1>This is my shopping list </h1>");
 
@@ -12,14 +11,24 @@ document.write("<h1>This is my shopping list </h1>");
 // document.write("</ul>");
 
 document.write("<ul>");
-
-
-
     for (var i = 0; i < shoppingList.length; i++) {
-        console.log(shoppingList[i]);
         document.write("<li>"+shoppingList[i]+"</li>")
     };
-
-
-
 document.write("</ul>");
+
+var days = ["Monday", "Tuesday", "Wednesday"]
+var tasks = [
+  ["Cleaning", "Shopping"],
+  ["Homework", "something else"],
+  ["Work", "Gym"]
+]
+console.log(days);
+console.log(tasks);
+
+document.write("<h2>Daily Tasks</h2>");
+document.write("<ul>");
+    for (var i = 0; i < days.length; i++) {
+      document.write("<li>" + days[i] + "</li>");
+      console.log(tasks[i]);
+    }
+    document.write("</ul>");

@@ -1,0 +1,88 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Permanent Marker', cursive;
+}
+
+body{
+  background-color: black;
+  color: white;
+}
+
+h1{
+  font-size: 24px;
+}
+
+.welcomeLogo{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title{
+  margin-left: 10px;
+}
+
+.fa-glass-whiskey{
+  font-size: 2em;
+  transform:scale(1,1.5);
+}
+
+.row{
+  margin: 20px;
+}
+
+.cupNotBought{
+  flex: 1;
+  text-align: center;
+  color: #9C9797;
+}
+
+.cupImage{
+  display: flex;
+  position: absolute;
+  color: #9C9797;
+  z-index: 5;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.free{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.container {
+  text-align: center; }
+
+.menuList {
+    list-style: none;
+    line-height: normal; }
+
+.menuList .menuItemTitle {
+      font-size: 1.25em;
+      padding-top: 10px; }
+
+.menuList .menuTitle {
+      color: #FFFD80;
+      font-size: 16px; }
+
+.menuList .menuItem {
+      font-size: 0.75em;
+      line-height: 90%; }
+
+.menuList .item1 {
+      color: #5ECC60; }
+
+.menuList .item2 {
+      color: #DB3B99; }
+
+.menuList .item3 {
+      color: #DEC13E; }
+
+.menuList .item4 {
+      color: #C91006; }
+
+.menuList .item5 {
+      color: #2BC2BA; }
