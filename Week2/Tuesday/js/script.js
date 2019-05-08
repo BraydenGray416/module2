@@ -16,7 +16,13 @@ document.write("<ul>");
     };
 document.write("</ul>");
 
-var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+var days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+  ];
 var tasks = [
   ["Cleaning", "Shopping"],
   ["Homework", "something else", "Shopping"],
