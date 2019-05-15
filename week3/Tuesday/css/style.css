@@ -20,6 +20,7 @@ body,html{
   background-color: white;
   padding: 10px;
   position: relative;
+  display: flex;
 }
 
 #close{
@@ -28,6 +29,7 @@ body,html{
   top: 0;
   margin: 10px;
   color: #2c3e50;
+  z-index: 9000000000;
 }
 
 #close:hover{
@@ -39,4 +41,18 @@ body,html{
 .movieThumb:hover{
   opacity: 0.5;
   cursor: pointer;
+}
+
+.poster{
+  height: 100%;
+}
+
+.badge-purple{
+  background-color: #5A3787;
+  color: white;
+}
+
+.badge-pink{
+  background-color: #fab0eb;
+  color: white;
 }

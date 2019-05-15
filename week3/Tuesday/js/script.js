@@ -4,7 +4,7 @@ var movies = [
     title: "The Amazing Spider-Man",
     year: 2012,
     directors: ["Marc Webb"],
-    bio: "Peter was abandoned at a young age and has to stop a doctor from being lizard man",
+    bio: "Abandoned by his parents and raised by an aunt and uncle, teenager Peter Parker (Andrew Garfield), AKA Spider-Man, is trying to sort out who he is and exactly what his feelings are for his first crush, Gwen Stacy (Emma Stone). When Peter finds a mysterious briefcase that was his father's, he pursues a quest to solve his parents' disappearance. His search takes him to Oscorp and the lab of Dr. Curt Connors (Rhys Ifans), setting him on a collision course with Connors' alter ego, the Lizard.",
     length: 153,
     poster: "spiderman1.jpeg",
     genre: ["Action", "Thriller", "Fantasy", "Superhero", "Science fiction", "Action/Adventure", "Adventure", "Drama"]
@@ -14,7 +14,7 @@ var movies = [
     title: "The Amazing Spider-Man 2",
     year: 2014,
     directors: ["Marc Webb"],
-    bio: "Peter has to fight and help electric man",
+    bio: "Confident in his powers as Spider-Man, Peter Parker (Andrew Garfield) embraces his new role as a hero and spends time with Gwen Stacy (Emma Stone) in between protecting New York from criminals. However, his greatest battle yet is about to begin. With the emergence of Electro (Jamie Foxx), Peter must confront an enemy far more powerful than he is. And when his old friend Harry Osborn (Dane DeHaan) returns, Peter comes to realize that all his enemies have one thing in common: Oscorp.",
     length: 142,
     poster: "spiderman2.jpg",
     genre: ["Action", "Superhero", "Fantasy", "Adventure", "Science fiction"]
@@ -24,7 +24,7 @@ var movies = [
     title: "Spider-Man: Homecoming",
     year: 2017,
     directors: ["Jon Watts"],
-    bio: "Peter has to fight his new girlfriends dad",
+    bio: "Thrilled by his experience with the Avengers, young Peter Parker returns home to live with his Aunt May. Under the watchful eye of mentor Tony Stark, Parker starts to embrace his newfound identity as Spider-Man. He also tries to return to his normal daily routine -- distracted by thoughts of proving himself to be more than just a friendly neighborhood superhero. Peter must soon put his powers to the test when the evil Vulture emerges to threaten everything that he holds dear.",
     length: 133,
     poster: "spiderman3.jpg",
     genre: ["Action", "Superhero", "Science fiction", "Comedy", "Adventure", "Fantasy"]
@@ -34,7 +34,7 @@ var movies = [
     title: "Spider-Man: Far From Home",
     year: 2019,
     directors: ["Jon Watts"],
-    bio: "Peter goes to europe and something about the multiverse (TBC)",
+    bio: "Following the events of Avengers: Endgame, Spider-Man must step up to take on new threats in a world that has changed forever.",
     length: 135,
     poster: "spiderman4.jpeg",
     genre: ["Superhero", "Comedy", "Fantasy", "Science fiction", "Adventure"]
@@ -44,7 +44,7 @@ var movies = [
     title: "Spider-Man: Into the Spider-Verse",
     year: 2018,
     directors: ["Bob Persichetti", "Peter Ramsey", "Rodney Rothman"],
-    bio: "Many spider men intro to Miles ",
+    bio: "Teen Miles Morales becomes Spider-Man of his reality, crossing his path with five counterparts from another dimensions to stop a threat for all realities.",
     length: 116,
     poster: "spiderman5.png",
     genre: ["Animation", "Adventure", "Science fiction", "Action", "Animated cartoon", "Comic science fiction", "Comedy", "Fantasy", "Superhero", "Family"]
@@ -81,8 +81,8 @@ for (var i = 0; i < movies.length; i++) {
 
 
     var movieCard = '<div class="col-12 col-sm-6 col-md-3 mb-3 text-center">';
-        // movieCard += '<div class="movieThumb card ' + genreClass + ' " onclick="showMoreMovie();">';
-        movieCard += '<div class="movieThumb movieThumb2 card ' + genreClass + ' " >';
+        movieCard += '<div class="movieThumb card ' + genreClass + ' " onclick="showMoreMovie('+movie.id+');">';
+        // movieCard += '<div class="movieThumb movieThumb2 card ' + genreClass + ' " data-id="'+movie.id+'"">';
             movieCard += '<img src="images/posters/'+movie.poster+'" class="card-img-top" alt="">'
             movieCard += '<div class="card-body">';
                 movieCard += '<h5 class="card-title">'+movie.title+'</h5>'
@@ -128,23 +128,50 @@ for (var i = 0; i < movies.length; i++) {
 }
 
 
-function showMoreMovie(){
+function showMoreMovie(movieNumber){
+  var sungleMovie;
   // console.log("You have clicked on a movie");
+  console.log(movieNumber);
+  for (var i = 0; i < movies.length; i++) {
+      if (movies[i].id === movieNumber){
+        console.log(movies[i]);
+        singleMovie = movies[i];
+        break;
+      }
+  }
+  console.log(singleMovie);
+  document.getElementById('posterImage').src = 'images/posters/'+singleMovie.poster;
+  document.getElementById('movieTitle').innerText = singleMovie.title;
+  document.getElementById('movieYear').innerText = singleMovie.year;
+  document.getElementById('movieDirectors').innerHTML = '<li>'+singleMovie.directors+'</li>';
+  document.getElementById('movieBio').innerText = singleMovie.bio;
+  document.getElementById('movieLength').innerText = singleMovie.length;
+  document.getElementById('movieGenre').innerHTML = '<span class="badge badge-pill badge-primary">'+singleMovie.genre+'</span>';
+
+
+
+
+
+
   document.getElementById('moviePopUp').style.display= "flex";
   document.body.style.overflow = "hidden";
 }
 
 var movieThumbnails = document.getElementsByClassName('movieThumb2');
 for (var i = 0; i < movieThumbnails.length; i++) {
-  // console.log(movieThumbnails[i])
+  // console.log(movieThumbnails[i]);
+  // console.log(movieThumbnails[i].dataset.id);
   // movieThumbnails[i].onclick = showMoreMovie;
+var id = parseInt(movieThumbnails[i].dataset.id);
+  // console.log(id);
   movieThumbnails[i].onclick = function(){
-    showMoreMovie();
-  };
-
-  document.getElementById('close').onclick = function(){
-    document.getElementById('moviePopUp').style.display= "none";
-    document.body.style.overflow = "scroll";
+      var id = parseInt(this.dataset.id);
+    showMoreMovie(id);
   };
 
 }
+
+document.getElementById('close').onclick = function(){
+  document.getElementById('moviePopUp').style.display= "none";
+  document.body.style.overflow = "scroll";
+};
