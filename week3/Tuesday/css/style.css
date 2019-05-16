@@ -56,3 +56,11 @@ body,html{
   background-color: #fab0eb;
   color: white;
 }
+.badge-orange{
+  background-color: #ffa500;
+  color: white;
+}
+
+#posterImage{
+  max-height: 100%;
+}
