@@ -48,9 +48,78 @@ var movies = [
     movieLength: 116,
     poster: "spiderman5.png",
     genre: ["Animation", "Adventure", "Science fiction", "Action", "Animated cartoon", "Comic science fiction", "Comedy", "Fantasy", "Superhero", "Family"]
+  },
+  {
+    id: 6,
+    title: "Spider-Man",
+    year: 2002,
+    directors: ["Sam Raimi"],
+    bio: '"Spider-Man" centers on student Peter Parker (Tobey Maguire) who, after being bitten by a genetically-altered spider, gains superhuman strength and the spider-like ability to cling to any surface. He vows to use his abilities to fight crime, coming to understand the words of his beloved Uncle Ben: "With great power comes great responsibility."',
+    movieLength: 121,
+    poster: "spiderman6.jpg",
+    genre: ["Action", "Adventure", "Fantasy", "Superhero", "Science fiction"]
+  },
+  {
+    id: 7,
+    title: "Spider-Man 2",
+    year: 2004,
+    directors: ["Sam Raimi"],
+    bio: "When a failed nuclear fusion experiment results in an explosion that kills his wife, Dr. Otto Octavius (Alfred Molina) is transformed into Dr. Octopus, a cyborg with deadly metal tentacles. Doc Ock blames Spider-Man (Tobey Maguire) for the accident and seeks revenge. Meanwhile, Spidey's alter ego, Peter Parker, faces fading powers and self-doubt. Complicating matters are his best friend's (James Franco) hatred for Spider-Man and his true love's (Kirsten Dunst) sudden engagement to another man.",
+    movieLength: 135,
+    poster: "spiderman7.jpg",
+    genre: ["Action", "Adventure", "Superhero", "Science fiction"]
+  },
+  {
+    id: 8,
+    title: "Spider-Man 3",
+    year: 2007,
+    directors: ["Sam Raimi"],
+    bio: "Peter Parker (Tobey Maguire) and M.J. (Kirsten Dunst) seem to finally be on the right track in their complicated relationship, but trouble looms for the superhero and his lover. Peter's Spider-Man suit turns black and takes control of him, not only giving Peter enhanced power but also bringing out the dark side of his personality. Peter must overcome the suit's influence as two supervillains, Sandman and Venom, rise up to destroy him and all those he holds dear.",
+    movieLength: 156,
+    poster: "spiderman8.jpg",
+    genre: ["Action", "Adventure", "Science fiction", "Superhero", "Thriller"]
+  },
+  {
+    id: 9,
+    title: "Venom",
+    year: 2018,
+    directors: ["Ruben Fleischer"],
+    bio: "Journalist Eddie Brock is trying to take down Carlton Drake, the notorious and brilliant founder of the Life Foundation. While investigating one of Drake's experiments, Eddie's body merges with the alien Venom -- leaving him with superhuman strength and power. Twisted, dark and fueled by rage, Venom tries to control the new and dangerous abilities that Eddie finds so intoxicating.",
+    movieLength: 140,
+    poster: "spiderman9.png",
+    genre: ["Action", "Thriller", "Science fiction", "Horror", "Superhero"]
+  },
+  {
+    id: 10,
+    title: "Captain America: Civil War",
+    year: 2016,
+    directors: ["Joe Russo", "Anthony Russo"],
+    bio: "Political pressure mounts to install a system of accountability when the actions of the Avengers lead to collateral damage. The new status quo deeply divides members of the team. Captain America (Chris Evans) believes superheroes should remain free to defend humanity without government interference. Iron Man (Robert Downey Jr.) sharply disagrees and supports oversight. As the debate escalates into an all-out feud, Black Widow (Scarlett Johansson) and Hawkeye (Jeremy Renner) must pick a side.",
+    movieLength: 148,
+    poster: "spiderman10.jpg",
+    genre: ["Action", "Adventure", "Thriller", "Superhero", "Science fiction"]
+  },
+  {
+    id: 11,
+    title: "Avengers: Infinity War",
+    year: 2018,
+    directors: ["Joe Russo", "Anthony Russo"],
+    bio: "Iron Man, Thor, the Hulk and the rest of the Avengers unite to battle their most powerful enemy yet -- the evil Thanos. On a mission to collect all six Infinity Stones, Thanos plans to use the artifacts to inflict his twisted will on reality. The fate of the planet and existence itself has never been more uncertain as everything the Avengers have fought for has led up to this moment.",
+    movieLength: 160,
+    poster: "spiderman11.jpg",
+    genre: ["Action", "Superhero", "Fantasy", "Adventure", "Science fiction"]
+  },
+  {
+    id: 12,
+    title: "Avengers: Endgame",
+    year: 2019,
+    directors: ["Joe Russo", "Anthony Russo"],
+    bio: "Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the remaining Avengers -- Thor, Black Widow, Captain America and Bruce Banner -- must figure out a way to bring back their vanquished allies for an epic showdown with Thanos -- the evil demigod who decimated the planet and the universe.",
+    movieLength: 182,
+    poster: "spiderman12.jpg",
+    genre: ["Action", "Adventure", "Fantasy", "Superhero", "Science fiction"]
   }
 ]
-console.log(movies);
 var moviesList = document.getElementById("moviesList");
 
 
