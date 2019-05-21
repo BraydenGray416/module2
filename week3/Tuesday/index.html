@@ -15,14 +15,29 @@
                 <h1 class="display-3 text-center">Movies Library</h1>
             </div>
         </div>
+
         <div id="moviesList" class="row"></div>
         <div class="row">
             <div class="col">
-                <nav aria-label="Page navigation example">
-                    <ul id="paginationMovies" class="pagination justify-content-end">
-                        <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
-                    </ul>
-                </nav>
+              <div class="bottomBar d-flex justify-content-between">
+                <div class="dropdown">
+                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                  </a>
+
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+                  <nav aria-label="Page navigation example">
+                      <ul id="paginationMovies" class="pagination">
+                          <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                      </ul>
+                  </nav>
+              </div>
+
             </div>
         </div>
     </div>

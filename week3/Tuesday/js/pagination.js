@@ -127,12 +127,10 @@ var numberOfPages = Math.ceil(movies.length / maxNumberOnScreen);
 if (numberOfPages > 1) {
       var pagination = document.getElementById('paginationMovies');
       for (var i = 0; i < numberOfPages; i++) {
-        pagination.innerHTML += '<li class="page-item"><a class="page-link" href="#">'+(i+1)+'</a></li>';
+        pagination.innerHTML += '<li class="page-item"><a class="page-link" onclick="panelClick('+i+');" href="#">'+(i+1)+'</a></li>';
       }
 }
 
-var max = maxNumberOnScreen;
-var min = 0;
 
 if (maxNumberOnScreen > movies.length) {
     showMovieThumbnails(0, movies.length);
@@ -140,20 +138,20 @@ if (maxNumberOnScreen > movies.length) {
   showMovieThumbnails(0, maxNumberOnScreen);
 }
 
-
-
 function showMovieThumbnails(start, end){
     console.log(start);
     console.log(end);
 
 
+
+
     for (var i = start; i < end; i++) {
         var movie = movies[i];
 
-
+        var genreClass = getGenreColour(movie.genre[0]);
 
         var movieCard = '<div class="col-12 col-sm-6 col-md-3 mb-3 text-center">';
-            movieCard += '<div class="movieThumb card border-danger" onclick="showMoreMovie('+movie.id+');">';
+            movieCard += '<div class="movieThumb card border-'+genreClass+'" onclick="showMoreMovie('+movie.id+');">';
             // movieCard += '<div class="movieThumb movieThumb2 card ' + genreClass + ' " data-id="'+movie.id+'"">';
                 movieCard += '<img src="images/posters/'+movie.poster+'" class="card-img-top" alt="">';
                 movieCard += '<div class="card-body">';
@@ -166,4 +164,125 @@ function showMovieThumbnails(start, end){
 
         moviesList.innerHTML += movieCard;
     }
+}
+
+function panelClick(panelNumber){
+  moviesList.innerHTML = "";
+  console.log("You clicked on a panel number "+panelNumber);
+  start = panelNumber * maxNumberOnScreen;
+  end = start + maxNumberOnScreen;
+  console.log(start);
+  console.log(end);
+
+  if(end > movies.length){
+    end = movies.length;
+  }
+
+  for (var i = start; i < end; i++) {
+      var movie = movies[i];
+
+      var genreClass = getGenreColour(movie.genre[0]);
+
+      var movieCard = '<div class="col-12 col-sm-6 col-md-3 mb-3 text-center">';
+          movieCard += '<div class="movieThumb card border-'+genreClass+'" onclick="showMoreMovie('+movie.id+');">';
+          // movieCard += '<div class="movieThumb movieThumb2 card ' + genreClass + ' " data-id="'+movie.id+'"">';
+              movieCard += '<img src="images/posters/'+movie.poster+'" class="card-img-top" alt="">';
+              movieCard += '<div class="card-body">';
+                  movieCard += '<h5 class="card-title">'+movie.title+'</h5>';
+              movieCard +='</div>';
+          movieCard += '</div>';
+      movieCard += '</div>';
+
+
+
+      moviesList.innerHTML += movieCard;
+  }
+
+}
+
+function showMoreMovie(movieNumber){
+  var singleMovie;
+  // console.log("You have clicked on a movie");
+  for (var i = 0; i < movies.length; i++) {
+      if (movies[i].id === movieNumber){
+        singleMovie = movies[i];
+        break;
+      }
+  }
+  document.getElementById('posterImage').src = 'images/posters/'+singleMovie.poster;
+  document.getElementById('movieTitle').innerText = singleMovie.title;
+  document.getElementById('movieYear').innerText = singleMovie.year;
+  document.getElementById('movieDirectors').innerHTML = '';
+  for (var i = 0; i < singleMovie.directors.length; i++) {
+      document.getElementById('movieDirectors').innerHTML += '<li class="list-inline-item">'+singleMovie.directors[i]+'</li>';
+  }
+  document.getElementById('movieBio').innerText = singleMovie.bio;
+  document.getElementById('movieLength').innerText = singleMovie.movieLength;
+  document.getElementById('movieGenre').innerHTML = '';
+  var genreColour;
+  for (var i = 0; i < singleMovie.genre.length; i++) {
+    var genreColour = getGenreColour(singleMovie.genre[i]);
+
+      document.getElementById('movieGenre').innerHTML += '<span class="badge badge-pill badge-'+genreColour+'">'+singleMovie.genre[i]+'</span>';
+  }
+
+
+
+
+
+
+
+  document.getElementById('moviePopUp').style.display= "flex";
+  document.body.style.overflow = "hidden";
+}
+
+var movieThumbnails = document.getElementsByClassName('movieThumb2');
+for (var i = 0; i < movieThumbnails.length; i++) {
+  // console.log(movieThumbnails[i]);
+  // console.log(movieThumbnails[i].dataset.id);
+  // movieThumbnails[i].onclick = showMoreMovie;
+var id = parseInt(movieThumbnails[i].dataset.id);
+  // console.log(id);
+  movieThumbnails[i].onclick = function(){
+      var id = parseInt(this.dataset.id);
+    showMoreMovie(id);
+  };
+
+}
+
+document.getElementById('close').onclick = function(){
+  document.getElementById('moviePopUp').style.display= "none";
+  document.body.style.overflow = "scroll";
+};
+
+
+function getGenreColour(genre){
+  if (genre === 'Animation') {
+    return 'dark';
+  } else if (genre === 'Adventure') {
+    return 'success';
+  }else if (genre === 'Science fiction') {
+    return 'secondary';
+  }else if (genre === 'Action') {
+    return 'danger';
+  }
+  else if (genre === 'Animated cartoon') {
+    return 'warning';
+  }
+  else if (genre === 'Comic science fiction') {
+    return 'info';
+  }
+  else if (genre === 'Comedy') {
+    return 'purple';
+  }
+  else if (genre === 'Fantasy') {
+    return 'light';
+  }
+  else if (genre === 'Superhero') {
+    return 'primary';
+  }else if (genre === 'Family') {
+    return 'pink';
+  }else {
+    return 'orange';
+  }
 }

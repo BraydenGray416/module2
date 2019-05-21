@@ -200,7 +200,7 @@ for (var i = 0; i < movies.length; i++) {
 
 
 function showMoreMovie(movieNumber){
-  var sungleMovie;
+  var singleMovie;
   // console.log("You have clicked on a movie");
   for (var i = 0; i < movies.length; i++) {
       if (movies[i].id === movieNumber){
