@@ -122,14 +122,38 @@ var movies = [
 ];
 
 var maxNumberOnScreen = 8;
-var numberOfPages = Math.ceil(movies.length / maxNumberOnScreen);
+var currentTab = 'Movies';
 
-if (numberOfPages > 1) {
-      var pagination = document.getElementById('paginationMovies');
-      for (var i = 0; i < numberOfPages; i++) {
-        pagination.innerHTML += '<li class="page-item"><a class="page-link" onclick="panelClick('+i+');" href="#">'+(i+1)+'</a></li>';
-      }
+
+function numberOfPanels(){
+    var numberOfPages = Math.ceil(movies.length / maxNumberOnScreen);
+        if (numberOfPages > 1) {
+              var pagination = document.getElementById('paginationMovies');
+              pagination.innerHTML = "";
+              for (var i = 0; i < numberOfPages; i++) {
+                pagination.innerHTML += '<li class="page-item"><a class="page-link" onclick="panelClick('+i+');" href="#">'+(i+1)+'</a></li>';
+              }
+        }
 }
+
+var changeMaxNumOnScreen = ["4", "8", "12", "16", "20", "24"];
+
+    var dropdownMenu = document.getElementById('menuItems');
+    for (var a = 0; a < changeMaxNumOnScreen.length; a++) {
+        var maxOnScreen = changeMaxNumOnScreen[a];
+        dropdownMenu.innerHTML += '<a class="dropdown-item" onclick="maxOnScreenClick('+maxOnScreen+');" href="#">'+maxOnScreen+'</a>';
+    console.log(maxOnScreen);
+  }
+
+  function maxOnScreenClick(maxNumClicked){
+      moviesList.innerHTML = "";
+      console.log("You clicked on "+maxNumClicked+" as your max on screen");
+      maxNumberOnScreen = maxNumClicked;
+
+      showMovieThumbnails(0, maxNumberOnScreen);
+      numberOfPanels();
+
+  }
 
 
 if (maxNumberOnScreen > movies.length) {
@@ -142,7 +166,9 @@ function showMovieThumbnails(start, end){
     console.log(start);
     console.log(end);
 
-
+    if(end > movies.length){
+      end = movies.length;
+    }
 
 
     for (var i = start; i < end; i++) {
@@ -171,33 +197,8 @@ function panelClick(panelNumber){
   console.log("You clicked on a panel number "+panelNumber);
   start = panelNumber * maxNumberOnScreen;
   end = start + maxNumberOnScreen;
-  console.log(start);
-  console.log(end);
 
-  if(end > movies.length){
-    end = movies.length;
-  }
-
-  for (var i = start; i < end; i++) {
-      var movie = movies[i];
-
-      var genreClass = getGenreColour(movie.genre[0]);
-
-      var movieCard = '<div class="col-12 col-sm-6 col-md-3 mb-3 text-center">';
-          movieCard += '<div class="movieThumb card border-'+genreClass+'" onclick="showMoreMovie('+movie.id+');">';
-          // movieCard += '<div class="movieThumb movieThumb2 card ' + genreClass + ' " data-id="'+movie.id+'"">';
-              movieCard += '<img src="images/posters/'+movie.poster+'" class="card-img-top" alt="">';
-              movieCard += '<div class="card-body">';
-                  movieCard += '<h5 class="card-title">'+movie.title+'</h5>';
-              movieCard +='</div>';
-          movieCard += '</div>';
-      movieCard += '</div>';
-
-
-
-      moviesList.innerHTML += movieCard;
-  }
-
+  showMovieThumbnails(start, end);
 }
 
 function showMoreMovie(movieNumber){
@@ -286,3 +287,38 @@ function getGenreColour(genre){
     return 'orange';
   }
 }
+
+var pageTabs = document.getElementsByClassName('page-tab');
+for (var i = 0; i < pageTabs.length; i++) {
+  pageTabs[i].onclick = function(){
+    // console.log("you have clicked on a tab");
+    for (var j = 0; j < pageTabs.length; j++) {
+        if(pageTabs[j].classList.contains('active')){
+            pageTabs[j].classList.remove('active');
+            break;
+        }
+    }
+    if(!this.classList.contains('active')){
+        this.classList.add('active');
+    }
+    changeTab(this.innerText)
+  }
+}
+
+function changeTab(tabName){
+    if(currentTab === tabName){
+        console.log('you are still on the same page');
+    } else {
+      currentTab = tabName;
+        console.log('Change to the ' + tabName + ' page')
+    }
+}
+
+
+
+
+
+
+
+
+numberOfPanels();
