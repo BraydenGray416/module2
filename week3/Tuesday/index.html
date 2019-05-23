@@ -24,34 +24,35 @@
                     <li class="nav-item">
                       <a class="nav-link page-tab" href="#">Directors</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link page-tab" href="#">Who is Spiderman?</a>
+                    </li>
                 </ul>
 
             </div>
 
         </div>
+        <div id="pageContainer">
+          <div id="moviesList" class="row"></div>
+          <div class="row">
+              <div class="col">
+                <div class="bottomBar d-flex justify-content-between">
+                  <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Max Items per panel
+                    </a>
 
-        <div id="moviesList" class="row"></div>
-        <div class="row">
-            <div class="col">
-              <div class="bottomBar d-flex justify-content-between">
-                <div class="dropdown">
-                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Max Items per panel
-                  </a>
-
-                  <div class="dropdown-menu" id="menuItems" aria-labelledby="dropdownMenuLink">
-                    <!-- <a class="dropdown-item" href="#">Action</a> -->
+                    <div class="dropdown-menu" id="menuItems" aria-labelledby="dropdownMenuLink"></div>
                   </div>
+                    <nav aria-label="Page navigation example">
+                        <ul id="paginationMovies" class="pagination"></ul>
+                    </nav>
                 </div>
-                  <nav aria-label="Page navigation example">
-                      <ul id="paginationMovies" class="pagination">
-                          <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
-                      </ul>
-                  </nav>
-              </div>
 
-            </div>
+              </div>
+          </div>
         </div>
+
     </div>
 
 

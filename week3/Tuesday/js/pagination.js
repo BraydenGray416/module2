@@ -7,7 +7,8 @@ var movies = [
     bio: "Abandoned by his parents and raised by an aunt and uncle, teenager Peter Parker (Andrew Garfield), AKA Spider-Man, is trying to sort out who he is and exactly what his feelings are for his first crush, Gwen Stacy (Emma Stone). When Peter finds a mysterious briefcase that was his father's, he pursues a quest to solve his parents' disappearance. His search takes him to Oscorp and the lab of Dr. Curt Connors (Rhys Ifans), setting him on a collision course with Connors' alter ego, the Lizard.",
     movieLength: 153,
     poster: "spiderman1.jpeg",
-    genre: ["Action", "Thriller", "Fantasy", "Superhero", "Science fiction", "Action/Adventure", "Adventure", "Drama"]
+    genre: ["Action", "Thriller", "Fantasy", "Superhero", "Science fiction", "Action/Adventure", "Adventure", "Drama"],
+    actors: ["Andrew Garfield"]
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ var movies = [
     bio: "Confident in his powers as Spider-Man, Peter Parker (Andrew Garfield) embraces his new role as a hero and spends time with Gwen Stacy (Emma Stone) in between protecting New York from criminals. However, his greatest battle yet is about to begin. With the emergence of Electro (Jamie Foxx), Peter must confront an enemy far more powerful than he is. And when his old friend Harry Osborn (Dane DeHaan) returns, Peter comes to realize that all his enemies have one thing in common: Oscorp.",
     movieLength: 142,
     poster: "spiderman2.jpg",
-    genre: ["Action", "Superhero", "Fantasy", "Adventure", "Science fiction"]
+    genre: ["Action", "Superhero", "Fantasy", "Adventure", "Science fiction"],
+    actors: ["Andrew Garfield"]
   },
   {
     id: 3,
@@ -125,7 +127,22 @@ var maxNumberOnScreen = 8;
 var currentTab = 'Movies';
 
 
-function numberOfPanels(){
+
+
+
+function showMovies(){
+  var changeMaxNumOnScreen = ["4", "8", "12", "16", "20", "24"];
+
+  console.log("Show movies");
+  pageContainer.innerHTML = '<div id="moviesList" class="row"></div>';
+
+  pageContainer.innerHTML += '<div class="row"><div class="col"><div class="bottomBar d-flex justify-content-between"><div class="dropdown"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Max Items per panel</a><div class="dropdown-menu" id="menuItems" aria-labelledby="dropdownMenuLink"></div></div><nav><ul id="paginationMovies" class="pagination justify-content-end"></ul></nav></div></div>'
+  var dropdownMenu = document.getElementById('menuItems');
+  for (var a = 0; a < changeMaxNumOnScreen.length; a++) {
+      var maxOnScreen = changeMaxNumOnScreen[a];
+      dropdownMenu.innerHTML += '<a class="dropdown-item" onclick="maxOnScreenClick('+maxOnScreen+');" href="#">'+maxOnScreen+'</a>';
+    }
+
     var numberOfPages = Math.ceil(movies.length / maxNumberOnScreen);
         if (numberOfPages > 1) {
               var pagination = document.getElementById('paginationMovies');
@@ -134,16 +151,21 @@ function numberOfPanels(){
                 pagination.innerHTML += '<li class="page-item"><a class="page-link" onclick="panelClick('+i+');" href="#">'+(i+1)+'</a></li>';
               }
         }
+        if (maxNumberOnScreen > movies.length) {
+            showMovieThumbnails(0, movies.length);
+        } else {
+          showMovieThumbnails(0, maxNumberOnScreen);
+        }
 }
 
-var changeMaxNumOnScreen = ["4", "8", "12", "16", "20", "24"];
 
-    var dropdownMenu = document.getElementById('menuItems');
-    for (var a = 0; a < changeMaxNumOnScreen.length; a++) {
-        var maxOnScreen = changeMaxNumOnScreen[a];
-        dropdownMenu.innerHTML += '<a class="dropdown-item" onclick="maxOnScreenClick('+maxOnScreen+');" href="#">'+maxOnScreen+'</a>';
-    console.log(maxOnScreen);
-  }
+
+  //   var dropdownMenu = document.getElementById('menuItems');
+  //   for (var a = 0; a < changeMaxNumOnScreen.length; a++) {
+  //       var maxOnScreen = changeMaxNumOnScreen[a];
+  //       dropdownMenu.innerHTML += '<a class="dropdown-item" onclick="maxOnScreenClick('+maxOnScreen+');" href="#">'+maxOnScreen+'</a>';
+  //   console.log(maxOnScreen);
+  // }
 
   function maxOnScreenClick(maxNumClicked){
       moviesList.innerHTML = "";
@@ -151,16 +173,12 @@ var changeMaxNumOnScreen = ["4", "8", "12", "16", "20", "24"];
       maxNumberOnScreen = maxNumClicked;
 
       showMovieThumbnails(0, maxNumberOnScreen);
-      numberOfPanels();
+      showMovies();
 
   }
 
 
-if (maxNumberOnScreen > movies.length) {
-    showMovieThumbnails(0, movies.length);
-} else {
-  showMovieThumbnails(0, maxNumberOnScreen);
-}
+
 
 function showMovieThumbnails(start, end){
     console.log(start);
@@ -305,13 +323,26 @@ for (var i = 0; i < pageTabs.length; i++) {
   }
 }
 
+var pageContainer = document.getElementById('pageContainer');
 function changeTab(tabName){
     if(currentTab === tabName){
         console.log('you are still on the same page');
     } else {
       currentTab = tabName;
-        console.log('Change to the ' + tabName + ' page')
+      pageContainer.innerHTML = "";
+        if (tabName === 'Directors') {
+            showDirectors();
+        }else if (tabName === 'Movies') {
+          pageContainer.innerHTML += '<div id="moviesList" class="row"></div>';
+          pageContainer.innerHTML += '<div class="row"><div class="col"><nav><ul id="paginationMovies" class="pagination justify-content-end"></ul></nav></div></div>';
+            showMovies();
+        }
     }
+}
+
+function showDirectors(){
+  console.log("show directors");
+  pageContainer.innerHTML = '<div class="row"><div class="col"><h1 class="display-4">Directors</h1></div></div>';
 }
 
 
@@ -319,6 +350,4 @@ function changeTab(tabName){
 
 
 
-
-
-numberOfPanels();
+showMovies();
