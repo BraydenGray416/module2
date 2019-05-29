@@ -146,7 +146,7 @@ pageTabs.click(function(){
 
 function changeTabs(tabName){
       if (currentTab === tabName) {
-
+        
       }else {
         currentTab = tabName;
         $('#pageContainer').html('');
@@ -156,20 +156,32 @@ function changeTabs(tabName){
 }
 
 
-
-// var pageTabs = document.getElementsByClassName('page-tab');
-// for (var i = 0; i < pageTabs.length; i++) {
-//   pageTabs[i].onclick = function(){
-//     // console.log("you have clicked on a tab");
-//     for (var j = 0; j < pageTabs.length; j++) {
-//         if(pageTabs[j].classList.contains('active')){
-//             pageTabs[j].classList.remove('active');
-//             break;
-//         }
+// function showMovieThumbnails(start, end){
+//     console.log(start);
+//     console.log(end);
+//
+//     if(end > movies.length){
+//       end = movies.length;
 //     }
-//     if(!this.classList.contains('active')){
-//         this.classList.add('active');
+//
+//
+//     for (var i = start; i < end; i++) {
+//         var movie = movies[i];
+//
+//         var genreClass = getGenreColour(movie.genre[0]);
+//
+//         var movieCard = '<div class="col-12 col-sm-6 col-md-3 mb-3 text-center">';
+//             movieCard += '<div class="movieThumb card border-'+genreClass+'" onclick="showMoreMovie('+movie.id+');">';
+//             // movieCard += '<div class="movieThumb movieThumb2 card ' + genreClass + ' " data-id="'+movie.id+'"">';
+//                 movieCard += '<img src="images/posters/'+movie.poster+'" class="card-img-top" alt="">';
+//                 movieCard += '<div class="card-body">';
+//                     movieCard += '<h5 class="card-title">'+movie.title+'</h5>';
+//                 movieCard +='</div>';
+//             movieCard += '</div>';
+//         movieCard += '</div>';
+//
+//
+//
+//         moviesList.innerHTML += movieCard;
 //     }
-//     changeTab(this.innerText)
-//   }
 // }
