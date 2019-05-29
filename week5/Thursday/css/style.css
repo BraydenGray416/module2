@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#imageSlider{
+    max-width: 1000px;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    height: 600px;
+    position: relative;
+}
+
+.slideContainer{
+    position: relative;
+    left: 0;
+    width: 3000px;
+    height: 600px;
+    transition: 1s;
+}
+
+.slideContainer::after{
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.slide{
+    width: 1000px;
+    float: left;
+}
+
+.slide img{
+    max-width: 100%;
+}
