@@ -1,6 +1,26 @@
 $(document).ready(function(){
-  $('.slideContainer').remove('.slide1')
-  $('.slideContainer').append('<div class="slide slide1 active"><img src="assets/spiderman1.jpg" alt=""></div>')
+    var slideContainer = $('.slideContainer');
+    setInterval(function(){
+
+      slideContainer.addClass('transition').css('transform', 'translateX(-1000px)')
+
+      setTimeout(function(){
+        var firstSlide = $('.slide').first();
+        slideContainer.append(firstSlide);
+        slideContainer.removeClass('transition').css('transform', 'translateX(0)')
+      }, 700)
+    },2000);
+
+    $('#next').click(function(){
+      var firstSlide = $('.slide').first();
+      slideContainer.append(firstSlide);
+    });
+
+
+
+
+
+
 
 
 });

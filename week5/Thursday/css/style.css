@@ -7,17 +7,17 @@
 #imageSlider{
     max-width: 1000px;
     margin: 0 auto;
-    /* overflow: hidden; */
+    overflow: hidden;
     height: 600px;
     position: relative;
 }
 
 .slideContainer{
     position: relative;
-    left: 0;
+    transform: translateX(0);
     width: 3000px;
     height: 600px;
-    transition: 1s;
+    left: -1000px;
 }
 
 .slideContainer::after{
@@ -33,4 +33,8 @@
 
 .slide img{
     max-width: 100%;
+}
+
+.transition {
+  transition: .7s;
 }
