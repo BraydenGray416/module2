@@ -1,0 +1,114 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.badge-normal{
+  color: white;
+  background-color: #A8A878;
+  border: 1px solid #6D6D4E;
+  height: 24px;
+}
+.badge-fighting{
+  color: white;
+  background-color: #C03028;
+  border: 1px solid #7D1F1A;
+  height: 24px;
+}
+.badge-flying{
+  color: white;
+  background-color: #A890F0;
+  border: 1px solid #6D5E9C;
+  height: 24px;
+}
+.badge-posion{
+  color: white;
+  background-color: #A8A878;
+  border: 1px solid #6D6D4E;
+  height: 24px;
+}
+.badge-ground{
+  color: white;
+  background-color: #E0C068;
+  border: 1px solid #927D44;
+  height: 24px;
+}
+.badge-rock{
+  color: white;
+  background-color: #B8A038;
+  border: 1px solid #786824;
+  height: 24px;
+}
+.badge-bug{
+  color: white;
+  background-color: #A8B820;
+  border: 1px solid #6D7815;
+  height: 24px;
+}
+.badge-ghost{
+  color: white;
+  background-color: #705898;
+  border: 1px solid #493963;
+  height: 24px;
+}
+.badge-steel{
+  color: white;
+  background-color: #B8B8D0;
+  border: 1px solid #787887;
+  height: 24px;
+}
+.badge-fire{
+  color: white;
+  background-color: #F08030;
+  border: 1px solid #9C531F;
+  height: 24px;
+}
+.badge-water{
+  color: white;
+  background-color: #6890F0;
+  border: 1px solid #445E9C;
+  height: 24px;
+}
+.badge-grass{
+  color: white;
+  background-color: #78C850;
+  border: 1px solid #4E8234;
+  height: 24px;
+}
+.badge-electric{
+  color: white;
+  background-color: #F8D030;
+  border: 1px solid #A1871F;
+  height: 24px;
+}
+.badge-psychic{
+  color: white;
+  background-color: #F85888;
+  border: 1px solid #A13959;
+  height: 24px;
+}
+.badge-ice{
+  color: white;
+  background-color: #98D8D8;
+  border: 1px solid #638D8D;
+  height: 24px;
+}
+.badge-dragon{
+  color: white;
+  background-color: #7038F8;
+  border: 1px solid #4924A1;
+  height: 24px;
+}
+.badge-dark{
+  color: white;
+  background-color: #705848;
+  border: 1px solid #49392F;
+  height: 24px;
+}
+.badge-fairy{
+  color: white;
+  background-color: #EE99AC;
+  border: 1px solid #9B6470;
+  height: 24px;
+}
