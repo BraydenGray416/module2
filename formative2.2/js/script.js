@@ -104,6 +104,21 @@ var pokemon = [
     name: "Spearow",
     sprite: "250px-021Spearow.png"
   },
+  {
+    id: 022,
+    name: "Fearow",
+    sprite: "250px-022Fearow.png"
+  },
+  {
+    id: 023,
+    name: "Ekans",
+    sprite: "250px-023Ekans.png"
+  },
+  {
+    id: 024,
+    name: "Arbok",
+    sprite: "250px-024Arbok.png"
+  },
 ];
 var pageContainer = document.getElementById('pageContainer');
 
@@ -116,7 +131,7 @@ pageContainer.innerHTML += '<div id="pokemonList" class="row border border-dange
   for (var i = 0; i < pokemon.length; i++) {
     var pokeList = pokemon[i];
 
-    var pokeCard = '<div class="col-12 col-sm-6 col-md-2 mb-3 text-center">';
+    var pokeCard = '<div class="col-12 col-sm-6 col-md-2 mb-3 mt-3 text-center">';
             pokeCard += '<div class="movieThumb movieThumb2 card h-100 border-dark">';
                 pokeCard += '<div class="card-body">'
                     pokeCard += '<img src="assets/'+pokeList.sprite+'" class="card-img-top" alt""';
