@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: bordere-box;
+			}
+
+			body {
+				background-color: #0D131D;
+			}
+
+			.container {
+				width: 60%;
+				margin: 0 auto;
+				display: flex;
+			}
+
+			.column {
+				width: 20%;
+				padding: 24px;
+			}
+
+			.box {
+				width: 100%;
+				border-radius: 16px;
+				margin-bottom: 48px;
+			}
+
+			.small {
+				height: 200px;
+			}
+
+			.medium {
+				height: 350px;
+			}
+
+			.large {
+				height: 500px;
+			}
+
+			.red {
+				background-color: #F44336;
+			}
+
+			.green {
+				background-color: #43A047;
+			}
+
+			.orange {
+				background-color: #FF6F00;
+			}
+
+			.blue {
+				background-color: #039BE5;
+			}
+
+			.purple {
+				background-color: #512DA8;
+			}
+
+			.teal {
+				background-color: #009688;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="column">
+				<div class="box large red"></div>
+				<div class="box medium purple"></div>
+				<div class="box small green"></div>
+				<div class="box medium blue"></div>
+				<div class="box medium orange"></div>
+        <img class="box" src="Wednesday/images/spiderman1.jpg" alt="">
+			</div>
+			<div class="column">
+				<div class="box small purple"></div>
+				<div class="box large teal"></div>
+				<div class="box medium blue"></div>
+				<div class="box small green"></div>
+				<div class="box large purple"></div>
+			</div>
+			<div class="column">
+				<div class="box large green"></div>
+				<div class="box small orange"></div>
+				<div class="box small blue"></div>
+				<div class="box large red"></div>
+				<div class="box medium teal"></div>
+			</div>
+			<div class="column">
+				<div class="box medium orange"></div>
+				<div class="box small green"></div>
+				<div class="box medium teal"></div>
+				<div class="box large red"></div>
+				<div class="box medium purple"></div>
+			</div>
+			<div class="column">
+				<div class="box large teal"></div>
+				<div class="box small green"></div>
+				<div class="box medium purple"></div>
+				<div class="box large blue"></div>
+				<div class="box small green"></div>
+
+			</div>
+		</div>
+
+		<script src="https://unpkg.com/scrollreveal"></script>
+		<script>
+			ScrollReveal().reveal('.box', {
+				delay: 100,
+				reset: true
+			});
+		</script>
+	</body>
+</html>
