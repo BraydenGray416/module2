@@ -24,8 +24,8 @@
 }
 .badge-posion{
   color: white;
-  background-color: #A8A878;
-  border: 1px solid #6D6D4E;
+  background-color: #A040A0;
+  border: 1px solid #682A68;
   height: 24px;
 }
 .badge-ground{
@@ -111,4 +111,50 @@
   background-color: #EE99AC;
   border: 1px solid #9B6470;
   height: 24px;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlayContent{
+  width: 80vw;
+  max-height: 70vh;
+  height: 70vh;
+  background-color: white;
+  padding: 10px;
+  position: relative;
+  display: flex;
+}
+
+#close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  color: #2c3e50;
+  z-index: 9000000000;
+}
+
+#close:hover{
+  color: #bdc3c7;
+  cursor: pointer;
+}
+
+
+.pokeThumb:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.poster{
+  height: 50%;
 }

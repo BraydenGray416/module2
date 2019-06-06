@@ -11,30 +11,51 @@
   <body>
     <div id="pageContainer" class="container">
       <div class="row text-center justify-content-center mb-1 mt-2">
-        <div class="col-md-1">Dex #</div>
-        <div class="col-md-1 badge badge-pill badge-normal">Normal</div>
-        <div class="col-md-1 badge badge-pill badge-fighting">Fighting</div>
-        <div class="col-md-1 badge badge-pill badge-flying">Flying</div>
-        <div class="col-md-1 badge badge-pill badge-posion">Posion</div>
-        <div class="col-md-1 badge badge-pill badge-ground">Ground</div>
-        <div class="col-md-1 badge badge-pill badge-rock">Rock</div>
-        <div class="col-md-1 badge badge-pill badge-bug">Bug</div>
-        <div class="col-md-1 badge badge-pill badge-ghost">Ghost</div>
-        <div class="col-md-1 badge badge-pill badge-steel">Steel</div>
+        <div class="col-md-1 pokeThumb" onclick="showAll();">Show All</div>
+        <div class="col-md-1 badge badge-pill badge-normal pokeThumb" onclick="typeClick('Normal');">Normal</div>
+        <div class="col-md-1 badge badge-pill badge-fighting pokeThumb" onclick="typeClick('Fighting');">Fighting</div>
+        <div class="col-md-1 badge badge-pill badge-flying pokeThumb" onclick="typeClick('Flying');">Flying</div>
+        <div class="col-md-1 badge badge-pill badge-posion pokeThumb" onclick="typeClick('Poison');">Posion</div>
+        <div class="col-md-1 badge badge-pill badge-ground pokeThumb" onclick="typeClick('Ground');">Ground</div>
+        <div class="col-md-1 badge badge-pill badge-rock pokeThumb" onclick="typeClick('Rock');">Rock</div>
+        <div class="col-md-1 badge badge-pill badge-bug pokeThumb" onclick="typeClick('Bug');">Bug</div>
+        <div class="col-md-1 badge badge-pill badge-ghost pokeThumb" onclick="typeClick('Ghost');">Ghost</div>
+        <div class="col-md-1 badge badge-pill badge-steel pokeThumb" onclick="typeClick('Steel');">Steel</div>
       </div>
       <div class="row text-center justify-content-center mb-3">
-        <div class="col-md-1">Alpha</div>
-        <div class="col-md-1 badge badge-pill badge-fire">Fire</div>
-        <div class="col-md-1 badge badge-pill badge-water">Water</div>
-        <div class="col-md-1 badge badge-pill badge-grass">Grass</div>
-        <div class="col-md-1 badge badge-pill badge-electric">Electric</div>
-        <div class="col-md-1 badge badge-pill badge-psychic">Psychic</div>
-        <div class="col-md-1 badge badge-pill badge-ice">Ice</div>
-        <div class="col-md-1 badge badge-pill badge-dragon">Dragon</div>
-        <div class="col-md-1 badge badge-pill badge-dark">Dark</div>
-        <div class="col-md-1 badge badge-pill badge-fairy">Fairy</div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1 badge badge-pill badge-fire pokeThumb" onclick="typeClick('Fire');">Fire</div>
+        <div class="col-md-1 badge badge-pill badge-water pokeThumb" onclick="typeClick('Water');">Water</div>
+        <div class="col-md-1 badge badge-pill badge-grass pokeThumb" onclick="typeClick('Grass');">Grass</div>
+        <div class="col-md-1 badge badge-pill badge-electric pokeThumb" onclick="typeClick('Electric');">Electric</div>
+        <div class="col-md-1 badge badge-pill badge-psychic pokeThumb" onclick="typeClick('Psychic');">Psychic</div>
+        <div class="col-md-1 badge badge-pill badge-ice pokeThumb" onclick="typeClick('Ice');">Ice</div>
+        <div class="col-md-1 badge badge-pill badge-dragon pokeThumb" onclick="typeClick('Dragon');">Dragon</div>
+        <div class="col-md-1 badge badge-pill badge-dark pokeThumb" onclick="typeClick('Dark');">Dark</div>
+        <div class="col-md-1 badge badge-pill badge-fairy pokeThumb" onclick="typeClick('Fairy');">Fairy</div>
       </div>
 
+    </div>
+
+    <div id="pokePopUp" class="overlay">
+        <div class="overlayContent">
+            <div id="close">
+                <i class="fas fa-times fa-2x"></i>
+            </div>
+            <div class="row h-100">
+                <div class="col-4 h-100">
+                    <img id="pokeImage" src="" class="h-100">
+                </div>
+                <div class="col-8">
+                    <h2 id="pokeName" class="display-4"></h2>
+                    <p id="pokeId"></p>
+                    <p id="pokeBio"></p>
+                    <div id="pokeType">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
