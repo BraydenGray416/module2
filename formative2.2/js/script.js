@@ -333,22 +333,26 @@ var pokemon = [
   {
     id: 56,
     name: "Mankey",
-    sprite: "250px-056Mankey.png"
+    sprite: "250px-056Mankey.png",
+    type: ["Fighting"]
   },
   {
     id: 57,
     name: "Primeape",
-    sprite: "250px-057Primeape.png"
+    sprite: "250px-057Primeape.png",
+    type: ["Fighting"]
   },
   {
     id: 58,
     name: "Growlithe",
-    sprite: "250px-058Growlithe.png"
+    sprite: "250px-058Growlithe.png",
+    type: ["Fire"]
   },
   {
     id: 59,
     name: "Arcanine",
-    sprite: "250px-059Arcanine.png"
+    sprite: "250px-059Arcanine.png",
+    type: ["Fire"]
   },
   {
     id: 60,
@@ -365,37 +369,44 @@ var pokemon = [
   {
     id: 62,
     name: "Poliwrath",
-    sprite: "250px-062Poliwrath.png"
+    sprite: "250px-062Poliwrath.png",
+    type: ["Water", "Fighting"]
   },
   {
     id: 63,
     name: "Abra",
-    sprite: "250px-063Abra.png"
+    sprite: "250px-063Abra.png",
+    type: ["Psychic"]
   },
   {
     id: 64,
     name: "Kadabra",
-    sprite: "250px-064Kadabra.png"
+    sprite: "250px-064Kadabra.png",
+    type: ["Psychic"]
   },
   {
     id: 65,
     name: "Alakazam",
-    sprite: "250px-065Alakazam.png"
+    sprite: "250px-065Alakazam.png",
+    type: ["Psychic"]
   },
   {
     id: 66,
     name: "Machop",
-    sprite: "250px-066Machop.png"
+    sprite: "250px-066Machop.png",
+    type: ["Fighting"]
   },
   {
     id: 67,
     name: "Machoke",
-    sprite: "250px-067Machoke.png"
+    sprite: "250px-067Machoke.png",
+    type: ["Fighting"]
   },
   {
     id: 68,
     name: "Machamp",
-    sprite: "250px-068Machamp.png"
+    sprite: "250px-068Machamp.png",
+    type: ["Fighting"]
   },
   {
     id: 69,
