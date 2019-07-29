@@ -411,88 +411,104 @@ var pokemon = [
   {
     id: 69,
     name: "Bellsprout",
-    sprite: "250px-069Bellsprout.png"
+    sprite: "250px-069Bellsprout.png",
+    type: ["Grass", "Poison"]
   },
   {
     id: 70,
     name: "Weepinbell",
-    sprite: "250px-070Weepinbell.png"
+    sprite: "250px-070Weepinbell.png",
+    type: ["Grass", "Poison"]
   },
   {
     id: 71,
     name: "Victreebel",
-    sprite: "250px-071Victreebel.png"
+    sprite: "250px-071Victreebel.png",
+    type: ["Grass", "Poison"]
   },
   {
     id: 72,
     name: "Tentacool",
-    sprite: "250px-072Tentacool.png"
+    sprite: "250px-072Tentacool.png",
+    type: ["Water", "Poison"]
   },
   {
     id: 73,
     name: "Tentacruel",
-    sprite: "250px-073Tentacruel.png"
+    sprite: "250px-073Tentacruel.png",
+    type: ["Water", "Poison"]
   },
   {
     id: 74,
     name: "Geodude",
-    sprite: "250px-074Geodude.png"
+    sprite: "250px-074Geodude.png",
+    type: ["Rock", "Ground"]
   },
   {
     id: 75,
     name: "Graveler",
-    sprite: "250px-075Graveler.png"
+    sprite: "250px-075Graveler.png",
+    type: ["Rock", "Ground"]
   },
   {
     id: 76,
     name: "Golem",
-    sprite: "250px-076Golem.png"
+    sprite: "250px-076Golem.png",
+    type: ["Rock", "Ground"]
   },
   {
     id: 77,
     name: "Ponyta",
-    sprite: "250px-077Ponyta.png"
+    sprite: "250px-077Ponyta.png",
+    type: ["Fire"]
   },
   {
     id: 78,
     name: "Rapidash",
-    sprite: "250px-078Rapidash.png"
+    sprite: "250px-078Rapidash.png",
+    type: ["Fire"]
   },
   {
     id: 79,
     name: "Slowpoke",
     sprite: "250px-079Slowpoke.png",
-    type: ["Water"]
+    type: ["Water", "Psychic"]
   },
   {
     id: 80,
     name: "Slowbro",
-    sprite: "250px-080Slowbro.png"
+    sprite: "250px-080Slowbro.png",
+    type: ["Water", "Psychic"]
   },
   {
     id: 81,
     name: "Magnemite",
-    sprite: "250px-081Magnemite.png"
+    sprite: "250px-081Magnemite.png",
+    type: ["Electric", "Steel"]
   },
   {
     id: 82,
     name: "Magneton",
-    sprite: "250px-082Magneton.png"
+    sprite: "250px-082Magneton.png",
+    type: ["Electric", "Steel"]
   },
   {
     id: 83,
     name: "Farfetch'd",
-    sprite: "250px-083Farfetch'd.png"
+    sprite: "250px-083Farfetch'd.png",
+    type: ["Normal", "Flying"]
   },
   {
     id: 84,
     name: "Doduo",
-    sprite: "250px-084Doduo.png"
+    sprite: "250px-084Doduo.png",
+    type: ["Normal", "Flying"]
   },
   {
     id: 85,
     name: "Dodrio",
-    sprite: "250px-085Dodrio.png"
+    sprite: "250px-085Dodrio.png",
+    type: ["Normal", "Flying"]
   },
   {
     id: 86,
@@ -503,17 +519,20 @@ var pokemon = [
   {
     id: 87,
     name: "Dewgong",
-    sprite: "250px-087Dewgong.png"
+    sprite: "250px-087Dewgong.png",
+    type: ["Water", "Ice"]
   },
   {
     id: 88,
     name: "Grimer",
-    sprite: "250px-088Grimer.png"
+    sprite: "250px-088Grimer.png",
+    type: ["Poison"]
   },
   {
     id: 89,
     name: "Muk",
-    sprite: "250px-089Muk.png"
+    sprite: "250px-089Muk.png",
+    type: ["Poison"]
   },
   {
     id: 90,
@@ -524,37 +543,44 @@ var pokemon = [
   {
     id: 91,
     name: "Cloyster",
-    sprite: "250px-091Cloyster.png"
+    sprite: "250px-091Cloyster.png",
+    type: ["Water", "Ice"]
   },
   {
     id: 92,
     name: "Gastly",
-    sprite: "250px-092Gastly.png"
+    sprite: "250px-092Gastly.png",
+    type: ["Ghost", "Poison"]
   },
   {
     id: 93,
     name: "Haunter",
-    sprite: "250px-093Haunter.png"
+    sprite: "250px-093Haunter.png",
+    type: ["Ghost", "Poison"]
   },
   {
     id: 94,
     name: "Gengar",
-    sprite: "250px-094Gengar.png"
+    sprite: "250px-094Gengar.png",
+    type: ["Ghost", "Poison"]
   },
   {
     id: 95,
     name: "Onix",
-    sprite: "250px-095Onix.png"
+    sprite: "250px-095Onix.png",
+    type: ["Rock", "Ground"]
   },
   {
     id: 96,
     name: "Drowzee",
-    sprite: "250px-096Drowzee.png"
+    sprite: "250px-096Drowzee.png",
+    type: ["Psychic"]
   },
   {
     id: 97,
     name: "Hypno",
-    sprite: "250px-097Hypno.png"
+    sprite: "250px-097Hypno.png",
+    type: ["Psychic"]
   },
   {
     id: 98,
@@ -583,72 +609,86 @@ var pokemon = [
   {
     id: 102,
     name: "Exeggcute",
-    sprite: "250px-102Exeggcute.png"
+    sprite: "250px-102Exeggcute.png",
+    type: ["Grass", "Psychic"]
   },
   {
     id: 103,
     name: "Exeggutor",
-    sprite: "250px-103Exeggutor.png"
+    sprite: "250px-103Exeggutor.png",
+    type: ["Grass", "Psychic"]
   },
   {
     id: 104,
     name: "Cubone",
-    sprite: "250px-104Cubone.png"
+    sprite: "250px-104Cubone.png",
+    type: ["Ground"]
   },
   {
     id: 105,
     name: "Marowak",
-    sprite: "250px-105Marowak.png"
+    sprite: "250px-105Marowak.png",
+    type: ["Ground"]
   },
   {
     id: 106,
     name: "Hitmonlee",
-    sprite: "250px-106Hitmonlee.png"
+    sprite: "250px-106Hitmonlee.png",
+    type: ["Fighting"]
   },
   {
     id: 107,
     name: "Hitmonchan",
-    sprite: "250px-107Hitmonchan.png"
+    sprite: "250px-107Hitmonchan.png",
+    type: ["Fighting"]
   },
   {
     id: 108,
     name: "Lickitung",
-    sprite: "250px-108Lickitung.png"
+    sprite: "250px-108Lickitung.png",
+    type: ["Normal"]
   },
   {
     id: 109,
     name: "Koffing",
-    sprite: "250px-109Koffing.png"
+    sprite: "250px-109Koffing.png",
+    type: ["Poison"]
   },
   {
     id: 110,
     name: "Weezing",
-    sprite: "250px-110Weezing.png"
+    sprite: "250px-110Weezing.png",
+    type: ["Poison"]
   },
   {
     id: 111,
     name: "Rhyhorn",
-    sprite: "250px-111Rhyhorn.png"
+    sprite: "250px-111Rhyhorn.png",
+    type: ["Rock", "Ground"]
   },
   {
     id: 112,
     name: "Rhydon",
-    sprite: "250px-112Rhydon.png"
+    sprite: "250px-112Rhydon.png",
+    type: ["Rock", "Ground"]
   },
   {
     id: 113,
     name: "Chansey",
-    sprite: "250px-113Chansey.png"
+    sprite: "250px-113Chansey.png",
+    type: ["Normal"]
   },
   {
     id: 114,
     name: "Tangela",
-    sprite: "250px-114Tangela.png"
+    sprite: "250px-114Tangela.png",
+    type: ["Grass"]
   },
   {
     id: 115,
     name: "Kangaskhan",
-    sprite: "250px-115Kangaskhan.png"
+    sprite: "250px-115Kangaskhan.png",
+    type: ["Normal"]
   },
   {
     id: 116,
@@ -677,47 +717,56 @@ var pokemon = [
   {
     id: 120,
     name: "Staryu",
-    sprite: "250px-120Staryu.png"
+    sprite: "250px-120Staryu.png",
+    type: ["Water"]
   },
   {
     id: 121,
     name: "Starmie",
-    sprite: "250px-121Starmie.png"
+    sprite: "250px-121Starmie.png",
+    type: ["Water", "Psychic"]
   },
   {
     id: 122,
     name: "Mr. Mime",
-    sprite: "250px-122Mr._Mime.png"
+    sprite: "250px-122Mr._Mime.png",
+    type: ["Psychic"]
   },
   {
     id: 123,
     name: "Scyther",
-    sprite: "250px-123Scyther.png"
+    sprite: "250px-123Scyther.png",
+    type: ["Bug", "Flying"]
   },
   {
     id: 124,
     name: "Jynx",
-    sprite: "250px-124Jynx.png"
+    sprite: "250px-124Jynx.png",
+    type: ["Ice", "Psychic"]
   },
   {
     id: 125,
     name: "Electabuzz",
-    sprite: "250px-125Electabuzz.png"
+    sprite: "250px-125Electabuzz.png",
+    type: ["Electric"]
   },
   {
     id: 126,
     name: "Magmar",
-    sprite: "250px-126Magmar.png"
+    sprite: "250px-126Magmar.png",
+    type: ["Fire"]
   },
   {
     id: 127,
     name: "Pinsir",
-    sprite: "250px-127Pinsir.png"
+    sprite: "250px-127Pinsir.png",
+    type: ["Bug"]
   },
   {
     id: 128,
     name: "Tauros",
-    sprite: "250px-128Tauros.png"
+    sprite: "250px-128Tauros.png",
+    type: ["Normal"]
   },
   {
     id: 129,
@@ -729,22 +778,25 @@ var pokemon = [
     id: 130,
     name: "Gyarados",
     sprite: "250px-130Gyarados.png",
-    type: ["Water"]
+    type: ["Water", "Flying"]
   },
   {
     id: 131,
     name: "Lapras",
-    sprite: "250px-131Lapras.png"
+    sprite: "250px-131Lapras.png",
+    type: ["Water", "Ice"]
   },
   {
     id: 132,
     name: "Ditto",
-    sprite: "250px-132Ditto.png"
+    sprite: "250px-132Ditto.png",
+    type: ["Normal"]
   },
   {
     id: 133,
     name: "Eevee",
-    sprite: "250px-133Eevee.png"
+    sprite: "250px-133Eevee.png",
+    type: ["Normal"]
   },
   {
     id: 134,
@@ -761,82 +813,98 @@ var pokemon = [
   {
     id: 136,
     name: "Flareon",
-    sprite: "250px-136Flareon.png"
+    sprite: "250px-136Flareon.png",
+    type: ["Fire"]
   },
   {
     id: 137,
     name: "Porygon",
-    sprite: "250px-137Porygon.png"
+    sprite: "250px-137Porygon.png",
+    type: ["Normal"]
   },
   {
     id: 138,
     name: "Omanyte",
-    sprite: "250px-138Omanyte.png"
+    sprite: "250px-138Omanyte.png",
+    type: ["Rock", "Water"]
   },
   {
     id: 139,
     name: "Omastar",
-    sprite: "250px-139Omastar.png"
+    sprite: "250px-139Omastar.png",
+    type: ["Rock", "Water"]
   },
   {
     id: 140,
     name: "Kabuto",
-    sprite: "250px-140Kabuto.png"
+    sprite: "250px-140Kabuto.png",
+    type: ["Rock", "Water"]
   },
   {
     id: 141,
     name: "Kabutops",
-    sprite: "250px-141Kabutops.png"
+    sprite: "250px-141Kabutops.png",
+    type: ["Rock", "Water"]
   },
   {
     id: 142,
     name: "Aerodactyl",
-    sprite: "250px-142Aerodactyl.png"
+    sprite: "250px-142Aerodactyl.png",
+    type: ["Rock", "Flying"]
   },
   {
     id: 143,
     name: "Snorlax",
-    sprite: "250px-143Snorlax.png"
+    sprite: "250px-143Snorlax.png",
+    type: ["Normal"]
   },
   {
     id: 144,
     name: "Articuno",
-    sprite: "250px-144Articuno.png"
+    sprite: "250px-144Articuno.png",
+    type: ["Ice", "Flying"]
   },
   {
     id: 145,
     name: "Zapdos",
-    sprite: "250px-145Zapdos.png"
+    sprite: "250px-145Zapdos.png",
+    type: ["Electric", "Flying"]
   },
   {
     id: 146,
     name: "Moltres",
-    sprite: "250px-146Moltres.png"
+    sprite: "250px-146Moltres.png",
+    type: ["Fire", "Flying"]
   },
   {
     id: 147,
     name: "Dratini",
-    sprite: "250px-147Dratini.png"
+    sprite: "250px-147Dratini.png",
+    type: ["Dragon"]
   },
   {
     id: 148,
     name: "Dragonair",
-    sprite: "250px-148Dragonair.png"
+    sprite: "250px-148Dragonair.png",
+    type: ["Dragon"]
   },
   {
     id: 149,
     name: "Dragonite",
-    sprite: "250px-149Dragonite.png"
+    sprite: "250px-149Dragonite.png",
+    type: ["Dragon", "Flying"]
   },
   {
     id: 150,
     name: "Mewtwo",
-    sprite: "250px-150Mewtwo.png"
+    sprite: "250px-150Mewtwo.png",
+    type: ["Psychic"]
   },
   {
     id: 151,
     name: "Mew",
-    sprite: "250px-151Mew.png"
+    sprite: "250px-151Mew.png",
+    type: ["Psychic"]
   }
 ];
 var pageContainer = document.getElementById('pageContainer');
